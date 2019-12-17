@@ -1,2 +1,3 @@
-# datastructures-and-algorithms-js
-Data structures and algorithms js
+# datastructures-and-algorithms
+
+overing the basics of data structures and algorithms in js

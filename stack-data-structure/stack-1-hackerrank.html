@@ -1,0 +1,34 @@
+<html>
+   <body>
+       <script>
+       function isBalanced(check) {
+
+let balanced = [];
+let map = {
+        '(': ')',
+        '[': ']',
+        '{': '}'
+    }
+
+
+for (let i = 0; i < check.length; i++){
+    if(check[i] === '(' || check[i] === '{' || check[i] === '[') {
+    balanced.push(check[i]);
+}
+ else {
+    let see = balanced.pop();
+
+     if (check[i] !== map[see]){
+        return 'NO';
+     }
+}
+}
+ if (balanced.length) {
+        return 'NO';
+    }
+    return 'YES' + balanced;
+}
+ 
+        </script>
+   </body>
+</html>

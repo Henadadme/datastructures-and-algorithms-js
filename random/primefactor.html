@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <body>
+            <script>
+
+                var number = 1222;
+                let stack = [];
+
+                for (let i = 2; i <= number; i++){
+                    if(number%2 === 0){
+                        number /= i
+                         stack.push(i);
+                    }
+                }
+                for (var k = 0; k < stack.length; k++) {
+  console.log(stack[k]);
+}
+                </script>
+        </body>
+    </head>
+</html>

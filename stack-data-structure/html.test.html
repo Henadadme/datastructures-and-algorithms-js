@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Responsive column layout</title>
+</head>
+
+<body>
+<style>
+.container {
+  display: flex;
+}
+
+.section1 {
+    background-color: blue;
+  flex: 1; 
+  border: 1px solid;
+}
+.section2 {
+    background-color: green;
+  flex: 1; 
+  border: 1px solid;
+}
+
+.section3 {
+    background-color: red;
+  flex: 1; 
+  border: 1px solid;
+}
+
+
+@media (max-width: 768px) { /*breakpoint*/
+  .container {
+    flex-direction: column;
+  }
+}
+</style>
+<div class="container">
+  <div class="section1">1</div>
+  <div class="section2">2</div>
+  <div class="section3">3</div>
+</div>
+</body>
+</html>

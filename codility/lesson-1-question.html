@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <script>
+
+            function solution(N) {
+  var binary = getBinaryForDecimal(N);
+  var splitBinary = binary.split('');
+  
+  var onesIndexes = [];
+  
+  var binaryGap = 0;
+  
+  // Find location of 1's
+  for (var i = 0; i < splitBinary.length; i++) {
+    if (parseInt(splitBinary[i])) {
+      onesIndexes.push(i);
+    }
+  }
+  
+  for (var i = 1; i <= onesIndexes.length; i++) {
+    if (binaryGap < onesIndexes[i] - onesIndexes[i-1] - 1)
+      binaryGap = onesIndexes[i] - onesIndexes[i-1] - 1;
+  }
+  
+  return binaryGap;
+}
+
+function getBinaryForDecimal(number) {
+  var current = number;
+  var remainderArray = [];
+  
+  while (current > 0) {
+    var remainder = current%2;
+    remainderArray.push(current%2);
+    current = parseInt(current/2);
+  }
+  
+  return (remainderArray.reverse().join('') + 'yes');
+}
+
+solution(20);
+solution(9);
+solution(1041);
+            </script>
+    </body>
+    </html>

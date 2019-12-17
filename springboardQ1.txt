@@ -1,0 +1,33 @@
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+var input = "";
+process.stdin.on("data", function isBalanced(chunk) {
+    input += chunk;
+    let balanced = [];
+let map = {
+        '(': ')',
+        '[': ']',
+        '{': '}',
+    }
+    let str = '()(())'
+     var c = chunk.replace(/[+*-/]/g,'');
+    var d = c.replace(/[0-9/]/g,'');
+    var f = d.replace(/[ \t]/g, '')
+    chunk === '(' || chunk=== '{' || chunk === '['
+     balanced.push(chunk);
+    
+    let see = balanced.pop();
+
+     if (chunk !== map[see]){
+         console.log( 'N' + ' '+ f)
+     }
+     if (chunk == map[see]) {
+        console.log('Y' + ' ' + f)
+    } 
+});
+
+process.stdin.on("end", function isBalanced(chunk) {
+    // now we can read/parse input
+    //isBalanced(chunk);
+});
+

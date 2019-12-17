@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<body>
+<script>
+
+
+// learning stack using arrays
+var letters = [];
+
+var word = "hello";
+
+var rword = "";
+
+// put letters of word into stack
+for (let i = 0; i< word.length; i++){
+    letters.push(word[i]);
+}
+
+// pop off the stack in reverse order
+for(let i =0; i < word.length; i++){
+    rword += letters.pop();
+}
+
+if (rword === word) {
+    console.log(word + "is a palindrome");
+}
+else {
+    console.log(word + "is not a palindrome");
+}
+// var arr = [34, 31, 34, 77, 82];
+// var arr1 = [22, 101, 102, 101, 102, 525, 88];
+// var arr2 = [66];
+// var arr3 = [14, 14, 2342, 2342, 2342];
+
+
+// function MostPopularNumber(array, value) {
+//     return array.filter((v) => (v === value)).length;
+// }
+
+// console.log(MostPopularNumber(arr, 34));  
+// console.log(MostPopularNumber(arr1, 101));  
+// console.log(MostPopularNumber(arr2, 66)); 
+// console.log(MostPopularNumber(arr1, 2342)); 
+</script>
+</body>
+</html>
